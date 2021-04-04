@@ -4,14 +4,15 @@ import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
+
 @NgModule({
-  declarations: [],
+  declarations: [ ],
   imports: [
     CommonModule,
-    NgxPaginationModule
+    NgxPaginationModule,
   ],
   exports:[
-    NgxPaginationModule
+    NgxPaginationModule,
   ]
 })
 export class SharedModule { }
