@@ -1,0 +1,8 @@
+<div class="input-group mb-3">
+    <input type="text" class="form-control" placeholder="enter a name" [formControl]="search">
+    <div class="input-group-append">
+        <button class="btn btn-outline-secondary" type="button" (click)="onSearch()">Search</button>
+    </div>
+
+</div>
+<button type="button" class="btn btn-link" (click)="onSearchCleared()">clear search filter</button>

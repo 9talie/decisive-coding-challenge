@@ -1,4 +1,4 @@
-<div class="container">
+<div class="row">
 
     <table *ngIf="people$" class="table table-hover">
         <thead>
@@ -9,7 +9,7 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let person of people$ | async | paginate : { itemsPerPage: 10, currentPage: p }">
+            <tr *ngFor="let person of people$ | async | filterPeople:  searchService.searchedItem  | paginate : { itemsPerPage: 10, currentPage: p }">
                 <td>{{person.name}}</td>
                 <td>{{person.registered}}</td>
                 <td>{{person.isActive}}</td>
