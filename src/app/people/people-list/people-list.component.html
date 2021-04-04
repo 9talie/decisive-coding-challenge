@@ -1,0 +1,22 @@
+<div class="container">
+
+    <table *ngIf="people$" class="table table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Date Registered</th>
+                <th scope="col">Is Active</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let person of people$ | async | paginate : { itemsPerPage: 10, currentPage: p }">
+                <td>{{person.name}}</td>
+                <td>{{person.registered}}</td>
+                <td>{{person.isActive}}</td>
+                <td>
+                    <button type="button" class="btn btn-dark">Edit</button></td>
+            </tr>
+        </tbody>
+    </table>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>
