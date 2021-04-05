@@ -8,5 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent{
   title = "Decisive's Coding Challenge";
+  currentComponent; 
+
+  onActivate(event){
+    this.currentComponent = event.constructor.name;
+
+    console.log( 'app ' , this.currentComponent);
+  }
   
 }

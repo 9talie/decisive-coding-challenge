@@ -20,8 +20,8 @@ export class PersonEditComponent implements OnInit {
   public profileForm :FormGroup ; 
 
 
-  constructor(private peopleService : PeopleService, route: ActivatedRoute) { 
-   this.id = route.snapshot.params.id;
+  constructor(private peopleService : PeopleService, private route: ActivatedRoute) { 
+   this.id = this.route.snapshot.params.id;
   }
 
   ngOnInit(): void {
