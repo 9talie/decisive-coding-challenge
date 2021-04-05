@@ -18,11 +18,11 @@ export class PersonEditComponent implements OnInit {
   }
 
   public profileForm = new FormGroup({
-    name: new FormControl('',[Validators.required,Validators.maxLength(70)]),
-    active: new FormControl(''),
+    name: new FormControl(this.person.name,[Validators.required,Validators.maxLength(70)]),
+    active: new FormControl(this.person.isActive),
     age: new FormControl(this.person.age,[Validators.required,Validators.min(18), Validators.max(110)]),
-    about: new FormControl('',Validators.maxLength(250)),
-    gender: new FormControl('',Validators.required),
+    about: new FormControl(this.person.about,Validators.maxLength(250)),
+    gender: new FormControl(this.person.gender,Validators.required),
   });
 
 
