@@ -12,8 +12,6 @@ export class HomeComponent implements OnInit {
   constructor(private modal : NgbModal ) { }
 
   ngOnInit(): void {
-    //temp
-    this.modal.open(NgbdModalContent);
   }
 
   addNewPerson(){

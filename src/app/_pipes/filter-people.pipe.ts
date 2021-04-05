@@ -14,9 +14,10 @@ export class FilterPeoplePipe implements PipeTransform {
     return people.filter((person:Person)=>{
      
       if(!person){return}
-      let searchLowerCase = search.toString().toLowerCase();
+      if(!person.name){return}
+      let searchLowerCase = search.toLowerCase();
 
-      if(person.name.toString().toLowerCase().indexOf(searchLowerCase)!== -1) 
+      if(person.name.toLowerCase().indexOf(searchLowerCase)!== -1) 
         return true;
       
         return false;

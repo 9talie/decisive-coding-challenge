@@ -13,7 +13,7 @@ import { NgbActiveModal, NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
     
     <div class="modal-body">
-     <app-person-edit></app-person-edit>
+     <app-person-edit [isNew]="true" ></app-person-edit>
     </div>
 
     <div class="modal-footer">

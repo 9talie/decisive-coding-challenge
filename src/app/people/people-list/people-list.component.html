@@ -14,7 +14,7 @@
                 <td>{{person.registered}}</td>
                 <td>{{person.isActive}}</td>
                 <td>
-                    <button type="button" class="btn btn-dark">Edit</button></td>
+                    <button type="button" class="btn btn-dark" [routerLink]="['/people/',person.id]">Edit</button></td>
             </tr>
         </tbody>
     </table>
