@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbdModalContent } from '../_ui/modal/modal.component';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modal : NgbModal ) { }
 
   ngOnInit(): void {
+    //temp
+    this.modal.open(NgbdModalContent);
+  }
+
+  addNewPerson(){
+    this.modal.open(NgbdModalContent);
   }
 
 }

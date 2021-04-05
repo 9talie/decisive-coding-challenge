@@ -1,0 +1,34 @@
+<form [formGroup]="profileForm">
+    <div class="form-group">
+        <label for="">Name</label>
+        <input formControlName="name" name="name" type="text" class="form-control">
+    </div>
+    <div class="form-group">
+
+        <label for="">Active</label>
+        <input formControlName="active" type="checkbox" name="active">
+    </div>
+    <div class="form-group">
+        <label for="">Age</label>
+        <input formControlName="age" type="number" class="form-control" name="age" max="110" min="18">
+    </div>
+    <div class="form-group">
+        <label for="">About</label>
+        <input formControlName="about" type="textarea" class="form-control" name="about">
+    </div>
+    <div class="form-group">
+        <label for="">About</label>
+        <select formControlName="gender" name="gender" id="">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+    </div>
+
+    <div class="btn-group" role="group" aria-label="Basic example">
+        <button type="button" class="btn btn-secondary">Delete</button>
+        <button type="button" class="btn btn-secondary" (click)="updatePerson()">Save</button>
+    </div>
+</form>
+<p>
+    Form Status: {{ profileForm.status }}
+</p>
