@@ -17,6 +17,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbdModalComponent, NgbdModalContent } from './_ui/modal/modal.component';
 import { PersonDisplayComponent } from './people/person-display/person-display.component';
 import { PersonEditComponent } from './people/person-edit/person-edit.component';
+import { FormlyModule } from '@ngx-formly/core';
+import { FormlyBootstrapModule } from '@ngx-formly/bootstrap';
 
 @NgModule({
   declarations: [
@@ -26,8 +28,8 @@ import { PersonEditComponent } from './people/person-edit/person-edit.component'
     SearchComponent,
     HomeComponent,
     FilterPeoplePipe,
-    NgbdModalComponent, 
-    NgbdModalContent, 
+    NgbdModalComponent,
+    NgbdModalContent,
     PersonDisplayComponent,
      PersonEditComponent
   ],
@@ -39,7 +41,9 @@ import { PersonEditComponent } from './people/person-edit/person-edit.component'
     ReactiveFormsModule,
     NgbModule,
     BrowserModule,
-    FormsModule
+    FormsModule,
+    FormlyModule.forRoot({ extras: { lazyRender: true } }),
+    FormlyBootstrapModule
   ],
   bootstrap: [
     AppComponent

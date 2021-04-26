@@ -1,5 +1,8 @@
 <div class="container">
-    <form *ngIf="person" [formGroup]="profileForm">
+  <form *ngIf="person" [formGroup]="profileForm">
+  <formly-form [form]="profileForm"  [fields]="fields" [model]="person"></formly-form>
+  </form>
+    <!-- <form *ngIf="person" [formGroup]="profileForm">
         <div class=" form-group ">
             <label for=" ">Name</label>
             <input formControlName="name" name="name" type="text " class="form-control ">
@@ -63,5 +66,5 @@
             <button *ngIf="!isNew " type="button " class="btn btn-secondary ">Delete</button>
             <button type="button " [disabled]="!profileForm.valid " class="btn btn-secondary " (click)="updatePerson() ">Save</button>
         </div>
-    </form>
+    </form>-->
 </div>
